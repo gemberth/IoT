@@ -20,8 +20,8 @@
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "red_interna"
-#define WIFI_PASSWORD "backontheair."
+#define WIFI_SSID "Redmi"
+#define WIFI_PASSWORD "04061234567"
 
 // Insert Firebase project API Key
 #define API_KEY "AIzaSyCwJBXyeJSIGcxfviMFx6p5j5RFqekhtZk"
@@ -34,7 +34,7 @@
 #define DATABASE_URL "https://esp32-iot-54d37-default-rtdb.firebaseio.com/"
 
 //sensor DHT-11
-#define DHTPIN 4 
+#define DHTPIN 27
 #define DHTTYPE    DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -97,7 +97,7 @@ float humidity;
 // Timer variables (send new readings every three minutes)
 unsigned long sendDataPrevMillis = 0;
 // 3 minutos 000 /4
-unsigned long timerDelay = 180000;
+unsigned long timerDelay = 5000;
 
 
 //Metodos del sensor dht 11
@@ -145,7 +145,14 @@ float readDHTHumidity() {
 //     while (1);
 //   }
 // }
+// Set your Static IP address
+// IPAddress local_IP(192, 168, 0, 192);
+// // Set your Gateway IP address
+// IPAddress gateway(192, 168, 0, 1);
 
+// IPAddress subnet(255, 255, 255, 0);
+// IPAddress primaryDNS(8, 8, 8, 8);   //optional
+// IPAddress secondaryDNS(8, 8, 4, 4); //optional
 // Initialize WiFi
 void initWiFi() {
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -175,7 +182,10 @@ void setup(){
 
   // Initialize DHT-11 sensor
    dht.begin();
-
+   // Configures static IP address
+  // if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+  //   Serial.println("STA Failed to configure");
+  // }
   // Initialize BME280 sensor
   //initBME();
   initWiFi();
@@ -242,5 +252,12 @@ void loop(){
     json.set(humPath.c_str(), String(readDHTHumidity()));
     json.set(timePath, String(timestamp));
     Serial.printf("Set json... %s\n", Firebase.RTDB.setJSON(&fbdo, parentPath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
+    
+    //Serial.printf("Mapeando denuenvo en ... ",timerDelay);
   }
+  //Serial.println(timerDelay);
+  //Serial.println(readDHTTemperature());
+  //Serial.println(readDHTHumidity()); 
+  
+
 }

@@ -208,7 +208,7 @@ function epochToJsDate(epochTime){
             content += '<td>' + epochToDateTime(timestamp) + '</td>';
             content += '<td>' + temperature + '</td>';
             content += '<td>' + humidity + '</td>';
-            content += '<td>' + pressure + '</td>';
+            //content += '<td>' + pressure + '</td>';
             content += '</tr>';
             $('#tbody').prepend(content);
             // Save lastReadingTimestamp --> corresponds to the first timestamp on the returned snapshot data
@@ -226,6 +226,8 @@ function epochToJsDate(epochTime){
         var dataList = []; // saves list of readings returned by the snapshot (oldest-->newest)
         var reversedList = []; // the same as previous, but reversed (newest--> oldest)
         console.log("APEND");
+        console.log(lastReadingTimestamp);
+
         dbRef.orderByKey().limitToLast(100).endAt(lastReadingTimestamp).once('value', function(snapshot) {
           // convert the snapshot to JSON
           if (snapshot.exists()) {
@@ -243,18 +245,31 @@ function epochToJsDate(epochTime){
                 firstTime = false;
               }
               else{
-                var temperature = element.temperature;
-                var humidity = element.humidity;
-                var pressure = element.pressure;
-                var timestamp = element.timestamp;
-                var content = '';
-                content += '<tr>';
-                content += '<td>' + epochToDateTime(timestamp) + '</td>';
-                content += '<td>' + temperature + '</td>';
-                content += '<td>' + humidity + '</td>';
-                content += '<td>' + pressure + '</td>';
-                content += '</tr>';
-                $('#tbody').append(content);
+                // filtrar datos segun la temperatura 
+                if (element.temperature > 20 && element.temperature < 21.90){
+                  var content = '';
+                  content += '<tr>';
+                  content += '<td>' + epochToDateTime(element.timestamp) + '</td>';
+                  content += '<td>' + element.temperature + '</td>';
+                  content += '<td>' + element.humidity + '</td>';
+                  //content += '<td>' + element.pressure + '</td>';
+                  content += '</tr>';
+                  $('#tbody').append(content);  
+                }
+
+
+                // var temperature = element.temperature;
+                // var humidity = element.humidity;
+                // var pressure = element.pressure;
+                // var timestamp = element.timestamp;
+                // var content = '';
+                // content += '<tr>';
+                // content += '<td>' + epochToDateTime(timestamp) + '</td>';
+                // content += '<td>' + temperature + '</td>';
+                // content += '<td>' + humidity + '</td>';
+                // //content += '<td>' + pressure + '</td>';
+                // content += '</tr>';
+                // $('#tbody').append(content);
               }
             });
           }
