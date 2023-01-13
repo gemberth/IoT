@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ESP Datalogging Firebase App</title>
+    <title>Monitoreo ambiental</title>
 
     <!-- include Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
@@ -57,24 +57,24 @@
 
     <!--TOP BAR-->
     <div class="topnav">
-      <h1>IoT Sensor App <i class="fas fa-clipboard-list"></i></h1>
+      <h1>IoT Monitoreo App <i class="fas fa-clipboard-list"></i></h1>
     </div>
 
     <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
     <div id="authentication-bar" style="display: none;">
-      <p><span id="authentication-status">User logged in</span>
-        <span id="user-details">USEREMAIL</span>
-        <a href="/" id="logout-link">(logout)</a>
+      <p><span id="authentication-status">Usuario logueado</span>
+        <span id="user-details">Correo</span>
+        <a href="/" id="logout-link">(Cerrar sesión)</a>
       </p>
     </div>
 
     <!--LOGIN FORM-->
     <form id="login-form" style="display: none;">
       <div class="form-elements-container">
-        <label for="input-email"><b>Email</b></label>
+        <label for="input-email"><b>Correo</b></label>
         <input type="text" placeholder="aeiou@email.com" id="input-email" required>
 
-        <label for="input-password"><b>Password</b></label>
+        <label for="input-password"><b>Contraseña</b></label>
         <input type="password" placeholder="Enter Password" id="input-password" required>
 
         <button type="submit" id="login-button">Login</button>
@@ -102,9 +102,9 @@
       <!--LAST UPDATE-->
       <p><span class ="date-time">Last update: <span id="lastUpdate"></span></span></p>
       <p>
-        Cards: <input type="checkbox" id="cards-checkbox" name="cards-checkbox" checked>
-        Gauges: <input type="checkbox" id="gauges-checkbox" name="gauges-checkbox" checked>
-        Charts: <input type="checkbox" id="charts-checkbox" name="charts-checkbox" unchecked>
+        Datos: <input type="checkbox" id="cards-checkbox" name="cards-checkbox" checked>
+        Medición: <input type="checkbox" id="gauges-checkbox" name="gauges-checkbox" checked>
+        Graficos: <input type="checkbox" id="charts-checkbox" name="charts-checkbox" unchecked>
       </p>
       <div id="cards-div">
         <div class="cards">

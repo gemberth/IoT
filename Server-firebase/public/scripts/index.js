@@ -195,7 +195,7 @@ function epochToJsDate(epochTime){
       function createTable(){
         // append all data to the table
         var firstRun = true;
-        dbRef.orderByKey().limitToLast(100).on('child_added', function(snapshot) {
+        dbRef.orderByKey().limitToLast(500).on('child_added', function(snapshot) {
           if (snapshot.exists()) {
             var jsonData = snapshot.toJSON();
             console.log(jsonData);
@@ -246,6 +246,7 @@ function epochToJsDate(epochTime){
               }
               else{
                 // filtrar datos segun la temperatura 
+
                 if (element.temperature > 20 && element.temperature < 21.90){
                   var content = '';
                   content += '<tr>';
