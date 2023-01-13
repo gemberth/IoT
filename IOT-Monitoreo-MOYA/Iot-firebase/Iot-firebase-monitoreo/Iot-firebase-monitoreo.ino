@@ -20,22 +20,22 @@
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "red_interna"
-#define WIFI_PASSWORD "backontheair."
+//#define WIFI_SSID "Xdd"
+//#define WIFI_PASSWORD "LaMarilyn.com"
 
+#define WIFI_SSID "iot"
+#define WIFI_PASSWORD "12345678"
 // Insert Firebase project API Key
-#define API_KEY "AIzaSyCwJBXyeJSIGcxfviMFx6p5j5RFqekhtZk"
-
+#define API_KEY "AIzaSyBWRLjXxwhZYWJQ2tyZ0mQKhz2VtM9Rf4k"
 // Insert Authorized Email and Corresponding Password
-#define USER_EMAIL "iot@gmail.com"
+#define USER_EMAIL "iot_monitoreo@gmail.com"
 #define USER_PASSWORD "12345678"
-
 // Insert RTDB URLefine the RTDB URL
-#define DATABASE_URL "https://esp32-iot-54d37-default-rtdb.firebaseio.com/"
+#define DATABASE_URL "https://iot-monitoreo-f7243-default-rtdb.firebaseio.com/"
 
 //sensor DHT-11
-#define DHTPIN 26
-#define DHTTYPE    DHT11
+#define DHTPIN 27
+#define DHTTYPE    DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
 unsigned long previousMillis = 0;  // Stores last time temperature was published
@@ -62,7 +62,6 @@ String presPath = "/pressure";
 **/
 
 String timePath = "/timestamp";
-
 // Sensor DHT-11-NODOS
 String tempPath = "/temperature";
 String humPath = "/humidity";
