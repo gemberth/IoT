@@ -20,8 +20,8 @@
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "red_interna"
-#define WIFI_PASSWORD "backontheair."
+#define WIFI_SSID "iot"
+#define WIFI_PASSWORD "12345678"
 
 // Insert Firebase project API Key
 #define API_KEY "AIzaSyCwJBXyeJSIGcxfviMFx6p5j5RFqekhtZk"
@@ -97,7 +97,7 @@ float humidity;
 // Timer variables (send new readings every three minutes)
 unsigned long sendDataPrevMillis = 0;
 // 3 minutos 000 /4
-unsigned long timerDelay = 5000;
+unsigned long timerDelay = 15000;
 
 
 //Metodos del sensor dht 11
@@ -231,6 +231,8 @@ void setup(){
 void loop(){
 
   // Send new readings to database
+  // Serial.println(readDHTTemperature());
+  // Serial.println(readDHTHumidity()); 
   if (Firebase.ready() && (millis() - sendDataPrevMillis > timerDelay || sendDataPrevMillis == 0)){
     sendDataPrevMillis = millis();
 
@@ -256,8 +258,8 @@ void loop(){
     //Serial.printf("Mapeando denuenvo en ... ",timerDelay);
   }
   //Serial.println(timerDelay);
-  //Serial.println(readDHTTemperature());
-  //Serial.println(readDHTHumidity()); 
+      // Serial.println(readDHTTemperature());
+      // Serial.println(readDHTHumidity()); 
   
 
 }

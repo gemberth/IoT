@@ -195,7 +195,7 @@ function epochToJsDate(epochTime){
       function createTable(){
         // append all data to the table
         var firstRun = true;
-        dbRef.orderByKey().limitToLast(500).on('child_added', function(snapshot) {
+        dbRef.orderByKey().limitToLast(900).on('child_added', function(snapshot) {
           if (snapshot.exists()) {
             var jsonData = snapshot.toJSON();
             console.log(jsonData);
