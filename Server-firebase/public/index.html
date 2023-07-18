@@ -67,6 +67,94 @@
         <a href="/" id="logout-link">(Cerrar sesión)</a>
       </p>
     </div>
+<!--BOTONES  BAR (USER DETAILS/LOGOUT BUTTON)-->
+
+
+<div class="botones-container">
+  <!-- Botón en la izquierda -->
+  <button type="button" id="descargar-xlsx" class="btn btn-primary">
+    
+      Descargar Datos en Excel
+  </button>
+  <!-- Botón en la derecha -->
+  <button type="button" id="descargar-csv" class="btn btn-danger">
+      <!-- <a href="https://em-9ab-99d7604f284e.herokuapp.com/regresionLineal/datos" target="_blank" style="color: white; text-decoration: none;">
+      </a> -->
+      Descargar Datos en CSV
+  </button>
+</div>
+
+
+
+    <div class="container mt-5 d-flex justify-content-center align-items-center">
+      <!-- Utiliza la clase 'btn' para el botón y la clase 'btn-primary' para darle estilo -->
+      <button type="button" class="btn btn-primary">
+          <!-- La etiqueta 'a' dentro del botón con el enlace deseado -->
+          <a href="https://colab.research.google.com/drive/1G0vkykRhwuvCxviOp1Hc7S_uRjr5NpgH#scrollTo=50WqG_EEwZoD" target="_blank" style="color: white; text-decoration: none;">
+              <!-- <a href="https://www.ejemplo.com" target="_blank" style="color: white; text-decoration: none;"> -->
+                  Machine Learning - Regrecion Lineal
+              </a>
+          </button>
+      </div>
+
+      <!-- <button id="descargar-csv">Descargar CSV</button> -->
+    <script>
+        const descargarCsvButton = document.getElementById('descargar-csv');
+        const descargarEcxelButton = document.getElementById('descargar-xlsx');
+        const fechaActual = new Date().toISOString().slice(0, 10);
+        // enlaceDescarga.download = `archivo_${fechaActual}.csv`;
+
+
+
+        descargarCsvButton.addEventListener('click', () => {
+            const url = 'https://em-9ab-99d7604f284e.herokuapp.com/datos'; // Reemplaza por la URL de tu servidor
+
+            fetch(url)
+                .then(response => response.blob()) // Convertir la respuesta a un objeto Blob
+                .then(blob => {
+                    // Crear un enlace (elemento <a>) para descargar el archivo
+                    const enlaceDescarga = document.createElement('a');
+                    enlaceDescarga.href = URL.createObjectURL(blob);
+                    enlaceDescarga.download = `DatosHumTemp${fechaActual}.csv`;
+                    enlaceDescarga.style.display = 'none';
+
+                    // Agregar el enlace al documento y hacer clic en él para iniciar la descarga
+                    document.body.appendChild(enlaceDescarga);
+                    enlaceDescarga.click();
+
+                    // Limpiar el enlace y liberar recursos después de la descarga
+                    enlaceDescarga.remove();
+                    URL.revokeObjectURL(enlaceDescarga.href);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+        descargarEcxelButton.addEventListener('click', () => {
+            const url = 'https://em-9ab-99d7604f284e.herokuapp.com/datosecxel'; // Reemplaza por la URL de tu servidor
+
+            fetch(url)
+                .then(response => response.blob()) // Convertir la respuesta a un objeto Blob
+                .then(blob => {
+                    // Crear un enlace (elemento <a>) para descargar el archivo
+                    const enlaceDescarga = document.createElement('a');
+                    enlaceDescarga.href = URL.createObjectURL(blob);
+                    enlaceDescarga.download = `DatosHumTemp${fechaActual}.xlsx`;
+                    enlaceDescarga.style.display = 'none';
+
+                    // Agregar el enlace al documento y hacer clic en él para iniciar la descarga
+                    document.body.appendChild(enlaceDescarga);
+                    enlaceDescarga.click();
+
+                    // Limpiar el enlace y liberar recursos después de la descarga
+                    enlaceDescarga.remove();
+                    URL.revokeObjectURL(enlaceDescarga.href);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
 
     <!--LOGIN FORM-->
     <form id="login-form" style="display: none;">
@@ -216,6 +304,10 @@
     <script src="scripts/charts-definition.js"></script>
     <script src="scripts/gauges-definition.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
   </body>
 </html>
