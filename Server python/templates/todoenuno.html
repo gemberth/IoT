@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<link rel="shortcut icon" href="./../static/icon/icon.svg" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/Casa.css')}}" media="screen">
+<title>Modelamiento y Simulacion &#x1f300;</title>
+{% endblock %}
+
+{% block content %}
+<section class="u-align-center u-clearfix u-grey-15 u-section-1" id="carousel_9cb5">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-text u-text-palette-1-base u-text-1">Numeros aleatorios&nbsp;</h4>
+        <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+        <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <img src="./../static/image/herramientas.png" alt=""
+                            class="u-image u-image-contain u-image-default u-image-1" data-image-width="512"
+                            data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-3">
+                            Metodo&nbsp;de&nbsp;los&nbsp;<br>cuadrados&nbsp;medios
+                        </h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-4"> Los&nbsp;<b>cuadrados
+                                medios&nbsp;</b>&nbsp;representan una estimación<br>&nbsp;de la varianza de la
+                            población.&nbsp; Se calculan dividiendo&nbsp;la&nbsp;<br>suma correspondiente de
+                            los&nbsp;<br><b>cuadrados</b>&nbsp;entre los grados de libertad.
+                        </p>
+                        <a href="{{url_for('cuadradosMedios')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <img src="./../static/image/matematicas.png" alt="" class="u-image u-image-default u-image-2"
+                            data-image-width="512" data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-5">
+                            Metodo&nbsp;de&nbsp;<br>congruencia&nbsp;lineal
+                        </h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-6">Los
+                            generadores&nbsp;<b>congruenciales</b>&nbsp;lineales generan una secuencia de números
+                            pseudoaleatorios en la cual el próximo número pseudoaleatorio es determinado a partir del
+                            último número generado
+                        </p>
+                        <a href="{{url_for('congruencialLineal')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-2">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-3">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                        <img src="./../static/image/matematicas1.png" alt=""
+                            class="u-image u-image-contain u-image-default u-image-3" data-image-width="512"
+                            data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-7">
+                            Metodo&nbsp;<br>congruencial&nbsp;<br>multiplicativo
+                        </h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-8"> Un generador lineal congruencial es un
+                            algoritmo que permite obtener una secuencia de números pseudoaleatorios calculados con una
+                            función lineal definida a trozos discontinua. Es uno de los métodos más antiguos y conocidos
+                            para la generación de números pseudoaleatorios</p>
+                        <a href="{{url_for('congruencialMultiplicativo')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-3"
+                            target="_blank">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-grey-15 u-section-2" id="sec-cb36">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-text u-text-palette-1-base u-text-1"> Modelos&nbsp;de&nbsp;Pronosticos&nbsp;</h4>
+        <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+        <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                    <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-1">
+                        <img src="./../static/image/matematicas5.png" alt=""
+                            class="u-image u-image-contain u-image-default u-image-1" data-image-width="512"
+                            data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-3"> Promedio&nbsp;Móvil</h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-4"> Los&nbsp;<b>cuadrados medios</b>
+                            <br>&nbsp;representan una estimación&nbsp;de la varianza de la población.&nbsp;<br>Se
+                            calculan dividiendo&nbsp;la&nbsp;suma correspondiente de
+                            los&nbsp;<b>cuadrados</b>&nbsp;entre los grados de libertad.
+                        </p>
+                        <a href="{{url_for('promedioMovil')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+                    <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-2">
+                        <img src="./../static/image/mt.png" alt="" class="u-image u-image-default u-image-2" data-image-width="512"
+                            data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-5">&nbsp; Suavización&nbsp; Exponencial</h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-6"> El&nbsp;método&nbsp;de&nbsp;suavizamiento
+                            exponencial&nbsp;es<br>una&nbsp; &nbsp;manera&nbsp;de&nbsp;pronosticar&nbsp;
+                            la&nbsp;demanda&nbsp;de&nbsp;un&nbsp;<br>producto&nbsp;en&nbsp;un&nbsp;periodo&nbsp;dado.&nbsp;
+                            Estima&nbsp;que&nbsp;la&nbsp;<br>demanda&nbsp;será&nbsp;igual&nbsp;a,&nbsp;&nbsp;por&nbsp;ejemplo,&nbsp;la&nbsp;media&nbsp;de&nbsp;<br>los&nbsp;consumos&nbsp;históricos&nbsp;para
+                            un&nbsp;periodo&nbsp;dado,&nbsp;dando&nbsp;una&nbsp;<br>mayor&nbsp;ponderación&nbsp;a&nbsp;los&nbsp;valores&nbsp;&nbsp;<br>más&nbsp;cercanos&nbsp;en&nbsp;el&nbsp;tiempo
+                        </p>
+                        <a href="{{url_for('suavizacionExponencial')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-2">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-grey-15 u-section-3" id="sec-e441">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-text u-text-palette-1-base u-text-1"> Regresiones&nbsp;</h4>
+        <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+        <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <img src="./../static/image/abaco.png" alt="" class="u-image u-image-contain u-image-default u-image-1"
+                            data-image-width="225" data-image-height="225">
+                        <h4 class="u-text u-text-palette-1-base u-text-3"> Regresión&nbsp;lineal</h4>
+                        <p class="u-small-text u-text u-text-variant u-text-4">
+                            La&nbsp;regresión&nbsp;lineal&nbsp;es&nbsp;una&nbsp;técnica&nbsp;
+                            de&nbsp;modelado&nbsp;estadístico&nbsp;que&nbsp;se&nbsp;<br>emplea&nbsp;para&nbsp;describir&nbsp;
+                            una&nbsp;variablede&nbsp;respuesta&nbsp;
+                            continua&nbsp;como&nbsp;una&nbsp;<br>función&nbsp;de&nbsp;una&nbsp;o&nbsp;varias&nbsp;variables
+                            predictoras.&nbsp;Puede&nbsp;ayudar&nbsp;a&nbsp;<br>comprender&nbsp;y&nbsp;predecir&nbsp;el&nbsp;
+                            comportamiento&nbsp;de&nbsp;sistemas&nbsp;<br>complejos&nbsp;o&nbsp;a&nbsp;analizar&nbsp;datos&nbsp;
+                            experimentales,&nbsp;financieros&nbsp;y<br>&nbsp;biológicos.
+                        </p>
+                        <a href="{{url_for('regresionLineal')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <img src="./../static/image/matematicas.png" alt="" class="u-image u-image-default u-image-2"
+                            data-image-width="512" data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-5"> Regresión&nbsp;lineal<br>&nbsp;cuadratica
+                        </h4>
+                        <p class="u-small-text u-text u-text-variant u-text-6">
+                            El&nbsp;modelo&nbsp;de&nbsp;regresión&nbsp;<br>cuadrática&nbsp;es&nbsp;
+                            una&nbsp;alternativa&nbsp;cuando&nbsp;el&nbsp;<br>modelo&nbsp;lineal&nbsp;no&nbsp;logra&nbsp;un&nbsp;<br>coeficiente&nbsp;de&nbsp;determinación
+                            apropiado,&nbsp;o&nbsp;cuando&nbsp;el&nbsp;<br>fenómeno&nbsp;<br>en&nbsp;estudio&nbsp;tiene&nbsp;un&nbsp;
+                            comportamiento&nbsp;que&nbsp;puede&nbsp;<br>considerarse&nbsp;como&nbsp;parabólico.
+                        </p>
+                        <a href="{{url_for('regresionLinealCuadrada')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-2">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-grey-15 u-section-4" id="sec-bbb9">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-text u-text-palette-1-base u-text-1"> Modelos&nbsp;de&nbsp;simulación&nbsp;</h4>
+        <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+        <div class="u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <img src="./../static/image/montecarlo.jpg" alt=""
+                            class="u-image u-image-contain u-image-default u-image-1" data-image-width="276"
+                            data-image-height="183">
+                        <h4 class="u-text u-text-palette-1-base u-text-3"> Metodo&nbsp;de&nbsp;<br>Montecarlo
+                        </h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-4"> El método de Montecarlo​ es un método no
+                            determinista o estadístico numérico, usado para aproximar expresiones matemáticas complejas
+                            y costosas de evaluar con exactitud.</p>
+                        <a href="{{url_for('sistemaMontecarlo')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <img src="./../static/image/iventario.jpeg" alt="" class="u-image u-image-default u-image-2"
+                            data-image-width="700" data-image-height="404">
+                        <h4 class="u-text u-text-palette-1-base u-text-5">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"
+                                href="#"> Sistema&nbsp;de<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inventario
+                            </a>
+                        </h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-6">
+                            En&nbsp;líneas&nbsp;generales,&nbsp;un&nbsp;sistema<br>&nbsp;de&nbsp;&nbsp;inventario&nbsp;es&nbsp;una&nbsp;herramienta&nbsp;de&nbsp;<br>gestión&nbsp;empleada&nbsp;para&nbsp;registrar<br>&nbsp;las&nbsp;cantidades&nbsp;de&nbsp;mercancías
+                            existentes&nbsp;en&nbsp;un&nbsp;negocio,&nbsp;<br>así&nbsp;como&nbsp;para&nbsp;determinar&nbsp;el&nbsp;costo&nbsp;de
+                            los&nbsp;productos&nbsp;vendidos
+                        </p>
+                        <a href="{{url_for('sistemaInventario')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-3">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-3">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                        <img src="./../static/image/Teoracolas.jpg" alt=""
+                            class="u-image u-image-contain u-image-default u-image-3" data-image-width="259"
+                            data-image-height="194">
+                        <h4 class="u-text u-text-palette-1-base u-text-7"> Lineas de espera</h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-8">
+                            Una&nbsp;línea&nbsp;de&nbsp;espera&nbsp;es&nbsp;&nbsp;el&nbsp;efecto&nbsp;<br>resultante&nbsp;en&nbsp;un&nbsp;sistema&nbsp;
+                            cuando&nbsp;la&nbsp;demanda&nbsp;<br>de&nbsp;un&nbsp;servicio&nbsp;supera&nbsp;la&nbsp;
+                            capacidad&nbsp;de&nbsp;proporcionar<br>&nbsp;dicho&nbsp;
+                            servicio.&nbsp;Este&nbsp;sistema&nbsp;
+                            está&nbsp;formado&nbsp;por&nbsp;un&nbsp;<br>conjunto&nbsp;de&nbsp;entidades&nbsp;en&nbsp;
+                            paralelo&nbsp;que&nbsp;proporcionan<br>&nbsp;un&nbsp;servicio&nbsp;a&nbsp;las
+                            transacciones&nbsp;que&nbsp; aleatoriamente&nbsp;entran<br>al&nbsp;sistema.
+                        </p>
+                        <a href="#"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-4">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

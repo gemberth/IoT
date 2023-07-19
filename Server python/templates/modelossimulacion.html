@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<link rel="shortcut icon" href="./../static/icon/icon.svg" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/Casa.css')}}" media="screen">
+<title>Modelamiento y Simulacion &#x1f300;</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="u-align-center u-clearfix u-grey-15 u-section-4" id="sec-bbb9">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h4 class="u-text u-text-palette-1-base u-text-1"> Modelos&nbsp;de&nbsp;simulación&nbsp;</h4>
+    <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+    <div class="u-expanded-width-xs u-list u-list-1">
+      <div class="u-repeater u-repeater-1">
+        <div class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+          <div class="u-container-layout u-similar-container u-container-layout-1">
+            <img src="./../static/image/montecarlo.jpg" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="276" data-image-height="183">
+            <h4 class="u-text u-text-palette-1-base u-text-3"> Metodo&nbsp;de&nbsp;<br>Montecarlo
+            </h4>
+            <p class="u-text u-text-palette-1-dark-2 u-text-4"> El método de Montecarlo​ es un método no determinista o estadístico numérico, usado para aproximar expresiones matemáticas complejas y costosas de evaluar con exactitud.</p>
+            <a href="{{url_for('sistemaMontecarlo')}}" class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+          </div>
+        </div>
+        <div class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+          <div class="u-container-layout u-similar-container u-container-layout-2">
+            <img src="./../static/image/iventario.jpeg" alt="" class="u-image u-image-default u-image-2" data-image-width="700" data-image-height="404">
+            <h4 class="u-text u-text-palette-1-base u-text-5">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="#"> Sistema&nbsp;de<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inventario
+              </a>
+            </h4>
+            <p class="u-text u-text-palette-1-dark-2 u-text-6"> En&nbsp;líneas&nbsp;generales,&nbsp;un&nbsp;sistema<br>&nbsp;de&nbsp;&nbsp;inventario&nbsp;es&nbsp;una&nbsp;herramienta&nbsp;de&nbsp;<br>gestión&nbsp;empleada&nbsp;para&nbsp;registrar<br>&nbsp;las&nbsp;cantidades&nbsp;de&nbsp;mercancías existentes&nbsp;en&nbsp;un&nbsp;negocio,&nbsp;<br>así&nbsp;como&nbsp;para&nbsp;determinar&nbsp;el&nbsp;costo&nbsp;de los&nbsp;productos&nbsp;vendidos
+            </p>
+            <a href="{{url_for('sistemaInventario')}}" class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-3">Iniciar</a>
+          </div>
+        </div>
+        <div class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-3">
+          <div class="u-container-layout u-similar-container u-container-layout-3">
+            <img src="./../static/image/Teoracolas.jpg" alt="" class="u-image u-image-contain u-image-default u-image-3" data-image-width="259" data-image-height="194">
+            <h4 class="u-text u-text-palette-1-base u-text-7"> Lineas de espera</h4>
+            <p class="u-text u-text-palette-1-dark-2 u-text-8"> Una&nbsp;línea&nbsp;de&nbsp;espera&nbsp;es&nbsp;&nbsp;el&nbsp;efecto&nbsp;<br>resultante&nbsp;en&nbsp;un&nbsp;sistema&nbsp; cuando&nbsp;la&nbsp;demanda&nbsp;<br>de&nbsp;un&nbsp;servicio&nbsp;supera&nbsp;la&nbsp; capacidad&nbsp;de&nbsp;proporcionar<br>&nbsp;dicho&nbsp; servicio.&nbsp;Este&nbsp;sistema&nbsp; está&nbsp;formado&nbsp;por&nbsp;un&nbsp;<br>conjunto&nbsp;de&nbsp;entidades&nbsp;en&nbsp; paralelo&nbsp;que&nbsp;proporcionan<br>&nbsp;un&nbsp;servicio&nbsp;a&nbsp;las transacciones&nbsp;que&nbsp; aleatoriamente&nbsp;entran<br>al&nbsp;sistema.
+            </p>
+            <a href="#" class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-4">Iniciar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

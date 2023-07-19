@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<link rel="shortcut icon" href="./../static/icon/icon.svg" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/Casa.css')}}" media="screen">
+<title>Modelamiento y Simulacion &#x1f300;</title>
+{% endblock %}
+
+{% block content %}
+<section class="u-align-center u-clearfix u-grey-15 u-section-3" id="sec-e441">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h4 class="u-text u-text-palette-1-base u-text-1"> Regresiones&nbsp;</h4>
+    <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+    <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+      <div class="u-repeater u-repeater-1">
+        <div class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+          <div class="u-container-layout u-similar-container u-container-layout-1">
+            <img src="./../static/image/abaco.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="225" data-image-height="225">
+            <h4 class="u-text u-text-palette-1-base u-text-3"> Regresión&nbsp;lineal</h4>
+            <p class="u-small-text u-text u-text-variant u-text-4"> La&nbsp;regresión&nbsp;lineal&nbsp;es&nbsp;una&nbsp;técnica&nbsp; de&nbsp;modelado&nbsp;estadístico&nbsp;que&nbsp;se&nbsp;<br>emplea&nbsp;para&nbsp;describir&nbsp; una&nbsp;variablede&nbsp;respuesta&nbsp; continua&nbsp;como&nbsp;una&nbsp;<br>función&nbsp;de&nbsp;una&nbsp;o&nbsp;varias&nbsp;variables predictoras.&nbsp;Puede&nbsp;ayudar&nbsp;a&nbsp;<br>comprender&nbsp;y&nbsp;predecir&nbsp;el&nbsp; comportamiento&nbsp;de&nbsp;sistemas&nbsp;<br>complejos&nbsp;o&nbsp;a&nbsp;analizar&nbsp;datos&nbsp; experimentales,&nbsp;financieros&nbsp;y<br>&nbsp;biológicos.
+            </p>
+            <a href="{{url_for('regresionLineal')}}" class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+          </div>
+        </div>
+        <div class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+          <div class="u-container-layout u-similar-container u-container-layout-2">
+            <img src="./../static/image/matematicas.png" alt="" class="u-image u-image-default u-image-2" data-image-width="512" data-image-height="512">
+            <h4 class="u-text u-text-palette-1-base u-text-5"> Regresión&nbsp;lineal<br>&nbsp;cuadratica
+            </h4>
+            <p class="u-small-text u-text u-text-variant u-text-6"> El&nbsp;modelo&nbsp;de&nbsp;regresión&nbsp;<br>cuadrática&nbsp;es&nbsp; una&nbsp;alternativa&nbsp;cuando&nbsp;el&nbsp;<br>modelo&nbsp;lineal&nbsp;no&nbsp;logra&nbsp;un&nbsp;<br>coeficiente&nbsp;de&nbsp;determinación apropiado,&nbsp;o&nbsp;cuando&nbsp;el&nbsp;<br>fenómeno&nbsp;<br>en&nbsp;estudio&nbsp;tiene&nbsp;un&nbsp; comportamiento&nbsp;que&nbsp;puede&nbsp;<br>considerarse&nbsp;como&nbsp;parabólico.
+            </p>
+            <a href="{{url_for('regresionLinealCuadrada')}}" class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-2">Iniciar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

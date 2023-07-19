@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/Casa.css')}}" media="screen">
+<link rel="shortcut icon" href="./../static/icon/icon.svg" />
+<title>Modelamiento y Simulacion &#x1f300;</title>
+{% endblock %}
+
+{% block content %}
+<section class="u-align-center u-clearfix u-grey-15 u-section-2" id="sec-cb36">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-text u-text-palette-1-base u-text-1"> Modelos&nbsp;de&nbsp;Pronosticos&nbsp;</h4>
+        <h1 class="u-text u-text-default u-text-palette-1-base u-text-2">Eliga uno de nuestros ​servicios.</h1>
+        <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                    <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-1">
+                        <img src="./../static/image/matematicas5.png" alt=""
+                            class="u-image u-image-contain u-image-default u-image-1" data-image-width="512"
+                            data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-3"> Promedio&nbsp;Móvil</h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-4"> Los&nbsp;<b>cuadrados medios</b>
+                            <br>&nbsp;representan una estimación&nbsp;de la varianza de la población.&nbsp;<br>Se
+                            calculan dividiendo&nbsp;la&nbsp;suma correspondiente de
+                            los&nbsp;<b>cuadrados</b>&nbsp;entre los grados de libertad.
+                        </p>
+                        <a href="{{url_for('promedioMovil')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1">Iniciar</a>
+                    </div>
+                </div>
+                <div
+                    class="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+                    <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-2">
+                        <img src="./../static/image/mt.png" alt="" class="u-image u-image-default u-image-2"
+                            data-image-width="512" data-image-height="512">
+                        <h4 class="u-text u-text-palette-1-base u-text-5">&nbsp; Suavización&nbsp; Exponencial</h4>
+                        <p class="u-text u-text-palette-1-dark-2 u-text-6"> El&nbsp;método&nbsp;de&nbsp;suavizamiento
+                            exponencial&nbsp;es<br>una&nbsp; &nbsp;manera&nbsp;de&nbsp;pronosticar&nbsp;
+                            la&nbsp;demanda&nbsp;de&nbsp;un&nbsp;<br>producto&nbsp;en&nbsp;un&nbsp;periodo&nbsp;dado.&nbsp;
+                            Estima&nbsp;que&nbsp;la&nbsp;<br>demanda&nbsp;será&nbsp;igual&nbsp;a,&nbsp;&nbsp;por&nbsp;ejemplo,&nbsp;la&nbsp;media&nbsp;de&nbsp;<br>los&nbsp;consumos&nbsp;históricos&nbsp;para
+                            un&nbsp;periodo&nbsp;dado,&nbsp;dando&nbsp;una&nbsp;<br>mayor&nbsp;ponderación&nbsp;a&nbsp;los&nbsp;valores&nbsp;&nbsp;<br>más&nbsp;cercanos&nbsp;en&nbsp;el&nbsp;tiempo
+                        </p>
+                        <a href="{{url_for('suavizacionExponencial')}}"
+                            class="u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-2">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
